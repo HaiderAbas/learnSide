@@ -10,29 +10,31 @@ const Navbar = () => {
 
     return (
         <>
-            <header className="w-full bg-[#0F243D] bg-opacity-30 shadow-md">
-                <nav className="flex justify-between items-center px-6 py-3">
+            <header className="w-full bg-[#0F243D] shadow-md">
+                <div className="max-w-[1290px] mx-auto px-4 sm:px-6 md:px-8 py-3 flex justify-between items-center">
                     <div>
                         <Image src={logo} alt="Company Logo" width={120} height={70} />
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <button className="px-2 py-1 font-Inter text-[13px] font-medium bg-blue-600 text-white rounded-md hover:bg-blue-700 transition border-none outline-none">
+                        <button className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
                             Apply Now
                         </button>
-                        <button
+
+                        <div
                             aria-label="Open menu"
-                            className="text-2xl text-white"
+                            className="text-3xl text-white md:hidden lg:block"
                             onClick={() => setIsOpen(true)}
                         >
                             <IoMenu />
-                        </button>
+                        </div>
                     </div>
-                </nav>
+                </div>
             </header>
+
             <div
                 className={`fixed top-0 right-0 w-64 h-full bg-[#0F243D] text-white transform ${isOpen ? "translate-x-0" : "translate-x-full"
-                    } transition-transform duration-300 shadow-lg z-50`}
+                    } transition-transform duration-300 z-50`}
             >
                 <button
                     aria-label="Close menu"
@@ -41,14 +43,12 @@ const Navbar = () => {
                 >
                     <IoClose />
                 </button>
-                <div className="p-6 flex flex-col gap-4 mt-10">
+                <div className="p-6 flex flex-col gap-5 mt-16 font-Inter text-sm">
                     <Link href="#" className="hover:text-gray-300">Our Founder</Link>
                     <Link href="#" className="hover:text-gray-300">Our Cohorts</Link>
                     <Link href="#" className="hover:text-gray-300">Bootcamp</Link>
                     <Link href="#" className="hover:text-gray-300">Choose HeyLearn2Code</Link>
                     <Link href="#" className="hover:text-gray-300">Career Support</Link>
-
-
                 </div>
             </div>
 
@@ -58,7 +58,6 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                 ></div>
             )}
-
         </>
     );
 };
