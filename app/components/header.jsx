@@ -1,6 +1,6 @@
 "use client";
 
-import TestimonialCard from "./TestimonialCard";
+import TestimonialCarousel from "./TestimonialCard";
 
 const Header = () => {
     return (
@@ -18,18 +18,18 @@ const Header = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <button className=" px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                        <button
+                            className="px-4  !font-normal bg-blue-600 text-white rounded-md hover:bg-blue-700 transition !text-sm"
+                        >
                             Apply Now
                         </button>
-                        <button className="px-4 py-2 text-sm font-medium bg-white text-[#0F243D] rounded-md transition">
+                        <button className="px-4 py-2 bg-white text-[#0F243D] rounded-md transition !text-sm">
                             Get Free Access
                         </button>
                     </div>
-
                     <p className="text-[13px] sm:text-sm leading-6 text-[#F0F3FF]">
                         ONLY FOR THOSE WHO GRADUATED LESS THAN 6 YEARS AGO
                     </p>
-
                     <div className="border border-[#1D436F] rounded-lg p-3 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-3 lg:gap-6 text-[#F0F3FF]">
                         {[
                             "Get developer job or it’s 100% free",
@@ -45,9 +45,9 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="mt-6 md:mt-0">
-                    <TestimonialCard />
-                </div>
+                <TestimonialCarousel />
+
+
             </div>
         </div>
     );

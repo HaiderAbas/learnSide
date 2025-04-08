@@ -1,69 +1,96 @@
 "use client";
-import { useRef, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import { FaPlay, FaStar } from "react-icons/fa";
-import card from "../../public/images/card.png";
+import Image from "next/image";
+import { GrFormPreviousLink,GrFormNextLink  } from "react-icons/gr";
 
-const TestimonialCard = () => {
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+// Dummy testimonial data
+const testimonials = [
+    {
+        video: "https://www.w3schools.com/html/mov_bbb.mp4",
+        name: "Kris Steigerwald",
+        text: "This bootcamp completely changed my life. The projects were real and helped me land a dev job.",
+        avatar: "/images/card.png",
+    },
+    {
+        video: "https://www.w3schools.com/html/movie.mp4",
+        name: "Jane Doe",
+        text: "Fantastic mentors and practical content. Highly recommend!",
+        avatar: "/images/card.png",
+    },
+    {
+        video: "https://www.w3schools.com/html/mov_bbb.mp4",
+        name: "Ali Khan",
+        text: "Loved the career support and hands-on projects.",
+        avatar: "/images/card.png",
+    },
+];
 
-    const handlePlay = () => {
-        if (videoRef.current) {
-            videoRef.current.play();
-            setIsPlaying(true);
-        }
-        else{
-            setIsPlaying(false)
-        }
-    };
+const TestimonialCarousel = () => {
+    const [current, setCurrent] = useState(0);
+    const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
+    const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
     return (
-        <div className="relative w-80 flex flex-col items-center">
-            <div className="relative w-72 bg-white shadow-lg rounded-2xl p-4 border border-purple-300 z-20">
-                <div className="relative w-full h-40 rounded-xl overflow-hidden border border-purple-300">
-                    <video
-                        ref={videoRef}
-                        src="https://www.w3schools.com/html/mov_bbb.mp4"
-                        className="w-full h-full object-cover rounded-xl"
-                        muted
-                        loop
-                        playsInline
-                    />
-                    {!isPlaying && (
-                        <button
-                            onClick={handlePlay}
-                            className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30"
+        <div className="relative w-full flex flex-col items-center">
+            <div className="relative max-w-70 h-80">
+                {testimonials.map((testimonial, index) => {
+                    const isActive = index === current;
+                    const isPrev = index === (current - 1 + testimonials.length) % testimonials.length;
+                    const isNext = index === (current + 1) % testimonials.length;
+
+                    return (
+                        <div
+                            key={index}
+                            className={`absolute top-0 rounded-xl border border-purple-300 p-4 bg-white shadow-md transition-all duration-500 ease-in-out
+                ${isActive ? "z-30 left-0 scale-100 opacity-100" : ""}
+                ${isPrev ? "z-20 left-8 mt-2 scale-92 opacity-100" : ""}
+                ${isNext ? "z-10 left-14 top-2 scale-88 opacity-100" : ""}
+                ${!isActive && !isPrev && !isNext ? "hidden" : ""}
+              `}
+                            style={{ width: "280px" }}
                         >
-                            <FaPlay className="text-blue-500 text-3xl bg-white p-2 rounded-full" />
-                        </button>
-                    )}
-                </div>
-                <div className="p-3">
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                        "Lorem ipsum dolor amet consectetur pellentesque scelerisque fermentum..."
-                    </p>
-                    <div className="flex items-center gap-2 mt-4">
-                        <Image
-                            src={card}
-                            alt="User Profile"
-                            width={40}
-                            height={40}
-                            className="rounded-full border border-purple-300"
-                        />
-                        <div>
-                            <h4 className="font-semibold text-gray-900 text-sm">Kris Steigerwald</h4>
-                            <div className="flex text-blue-500 text-xs">
-                                {[...Array(5)].map((_, i) => (
-                                    <FaStar key={i} />
-                                ))}
+                            <div className="relative w-full h-40 rounded-xl overflow-hidden border border-purple-300">
+                                <video
+                                    src={testimonial.video}
+                                    className="w-full h-full object-cover"
+                                    muted
+                                    loop
+                                    playsInline
+                                    controls
+                                />
+                                <button className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 rounded-xl">
+                                    <FaPlay className="text-blue-500 text-3xl bg-white p-2 rounded-full" />
+                                </button>
+                            </div>
+                            <p className="text-xs text-gray-600 leading-relaxed mt-2">{testimonial.text}</p>
+                            <div className="flex items-center gap-2 mt-4">
+                                <Image
+                                    src={testimonial.avatar}
+                                    alt="User Profile"
+                                    width={40}
+                                    height={40}
+                                    className="rounded-full border border-purple-300"
+                                />
+                                <div>
+                                    <h4 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h4>
+                                    <div className="flex text-blue-500 text-xs">
+                                        {[...Array(5)].map((_, i) => (
+                                            <FaStar key={i} />
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    );
+                })}
+            </div>
+            <div className="flex gap-4 ml-15">
+                <GrFormPreviousLink onClick={prev} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] cursor-pointer	"/>
+                <GrFormNextLink onClick={next} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] pointer cursor-pointer	"/>
             </div>
         </div>
     );
 };
 
-export default TestimonialCard;
+export default TestimonialCarousel;
