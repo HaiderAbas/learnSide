@@ -1,3 +1,5 @@
+import Cohorts from "./components/Cohorts";
+import AboutFounder from "./components/Founder";
 import Header from "./components/header";
 import Hours from "./components/Hours";
 
@@ -6,6 +8,8 @@ export default function Home() {
     <h1 className="">
       <Header/>
       <Hours/>
+      <AboutFounder/>
+      <Cohorts/>
     </h1>
   )
 }

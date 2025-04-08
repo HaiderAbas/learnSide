@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FaPlay, FaStar } from "react-icons/fa";
 import Image from "next/image";
-import { GrFormPreviousLink,GrFormNextLink  } from "react-icons/gr";
+import { GrFormPreviousLink, GrFormNextLink } from "react-icons/gr";
 
 // Dummy testimonial data
 const testimonials = [
@@ -33,7 +33,7 @@ const TestimonialCarousel = () => {
 
     return (
         <div className="relative w-full flex flex-col items-center">
-            <div className="relative max-w-70 h-80">
+            <div className="relative max-w-[423px] h-80">
                 {testimonials.map((testimonial, index) => {
                     const isActive = index === current;
                     const isPrev = index === (current - 1 + testimonials.length) % testimonials.length;
@@ -86,8 +86,8 @@ const TestimonialCarousel = () => {
                 })}
             </div>
             <div className="flex gap-4 ml-15">
-                <GrFormPreviousLink onClick={prev} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] cursor-pointer	"/>
-                <GrFormNextLink onClick={next} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] pointer cursor-pointer	"/>
+                <GrFormPreviousLink onClick={prev} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] cursor-pointer	" />
+                <GrFormNextLink onClick={next} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] pointer cursor-pointer	" />
             </div>
         </div>
     );
