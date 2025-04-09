@@ -5,7 +5,7 @@ import TestimonialCarousel from "./TestimonialCard";
 const Header = () => {
     return (
         <div className="w-full bg-[#0F243D] bg-opacity-30 shadow-md font-Inter flex justify-center">
-            <div className="flex flex-col md:flex-row justify-between items-center p-6 w-full max-w-screen-xl">
+            <div className="flex flex-col md:flex-row justify-between items-center p-6 w-full max-w-7xl mx-auto">
                 <div className="max-w-lg text-center md:text-left space-y-4">
                     <h2 className="font-inter font-bold text-white text-[20px] sm:text-[30px] md:text-4xl leading-[48px] sm:leading-[60px] md:leading-[63px] tracking-[-0.02em]">
                         <span className="text-blue-500 font-inter font-bold">Hey</span>Learn

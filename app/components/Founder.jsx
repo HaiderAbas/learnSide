@@ -16,7 +16,7 @@ const AboutFounder = () => {
     };
     return (
         <div className=" bg-[#0F243D]">
-            <div className="max-w-[1290] flex-wrap flex justify-around items-center py-11">
+            <div className=" flex-wrap flex justify-around items-center py-11  max-w-7xl mx-auto">
                 <div className="relative w-[500px] h-[327px] ">
                     <video
                         ref={videoRef}

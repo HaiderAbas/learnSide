@@ -1,3 +1,4 @@
+import Bonuses from "./components/Bonuses";
 import Bootcamp from "./components/Bootcamp";
 import Cohorts from "./components/Cohorts";
 import AboutFounder from "./components/Founder";
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutFounder/>
       <Cohorts/>
       <Bootcamp/>
+      <Bonuses />
     </h1>
   )
 }
