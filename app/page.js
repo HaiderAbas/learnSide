@@ -1,3 +1,4 @@
+import Bootcamp from "./components/Bootcamp";
 import Cohorts from "./components/Cohorts";
 import AboutFounder from "./components/Founder";
 import Header from "./components/header";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hours/>
       <AboutFounder/>
       <Cohorts/>
+      <Bootcamp/>
     </h1>
   )
 }
