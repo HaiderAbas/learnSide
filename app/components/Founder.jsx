@@ -18,7 +18,7 @@ const AboutFounder = () => {
         <div className=" bg-[#0F243D]">
             <div className=" flex-wrap flex justify-around items-center py-11  max-w-7xl mx-auto">
                 <div className="relative w-[500px] h-[327px] ">
-                    <video
+                    <videof
                         ref={videoRef}
                         src="https://cdn.pixabay.com/vimeo/1235685477/abstract-197351.mp4?width=640&hash=7e922d6e3c183bb7c4f663b77a71d2d4b6b00bfb"
                         className="w-full h-full object-cover"

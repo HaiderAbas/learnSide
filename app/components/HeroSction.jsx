@@ -2,12 +2,12 @@
 
 import TestimonialCarousel from "./TestimonialCard";
 
-const Header = () => {
+const Hero = () => {
     return (
-        <div className="w-full bg-[#0F243D] bg-opacity-30 shadow-md font-Inter flex justify-center">
-            <div className="flex flex-col md:flex-row justify-between items-center p-6 w-full max-w-7xl mx-auto">
+        <div className=" bg-[#0F243D] bg-opacity-30 shadow-md font-Inter flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2  p-6 w-full max-w-[1290px] mx-auto">
                 <div className="max-w-lg text-center md:text-left space-y-4">
-                    <h2 className="font-inter font-bold text-white text-[20px] sm:text-[30px] md:text-4xl leading-[48px] sm:leading-[60px] md:leading-[63px] tracking-[-0.02em]">
+                    <h2 className="font-inter font-bold text-white text-[20px] sm:text-[30px] md:text-4xl leading-[38px] sm:leading-[30px] md:leading-[50px] tracking-[-0.02em]">
                         <span className="text-blue-500 font-inter font-bold">Hey</span>Learn
                         <span className="text-blue-500 font-inter font-bold">2</span>Code’s <br />
                         Full Stack Coding <br /> Bootcamp
@@ -30,7 +30,7 @@ const Header = () => {
                         ONLY FOR THOSE WHO GRADUATED LESS THAN 6 YEARS AGO
                     </p>
 
-                    <div className="border border-[#1D436F] rounded-lg p-3 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-3 lg:gap-6 text-[#F0F3FF]">
+                    <div className="border border-[#1D436F] rounded-lg p-3 grid grid-cols-2 sm:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-3 lg:gap-6 text-[#F0F3FF]">
                         {[
                             "Get developer job or it’s 100% free",
                             "Learn practical coding skills with real projects",
@@ -38,19 +38,20 @@ const Header = () => {
                             "Flexible learning schedule",
                         ].map((text, index) => (
                             <div key={index} className="flex items-center gap-2 text-[9px] sm:text-[10px]">
-                                <span className="w-1 h-10 bg-[#1D436F] hidden lg:inline-block"></span>
+                                <span className="w-1 h-10 bg-[#1D436F]"></span>
                                 <p>{text}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="mt-6 md:mt-0 w-full  ">
+                <div className="w-full ">
                     <TestimonialCarousel />
                 </div>
+
             </div>
         </div>
     );
 };
 
-export default Header;
+export default Hero;

@@ -4,7 +4,6 @@ import { FaPlay, FaStar } from "react-icons/fa";
 import Image from "next/image";
 import { GrFormPreviousLink, GrFormNextLink } from "react-icons/gr";
 
-// Dummy testimonial data
 const testimonials = [
     {
         video: "https://www.w3schools.com/html/mov_bbb.mp4",
@@ -32,7 +31,7 @@ const TestimonialCarousel = () => {
     const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
     return (
-        <div className="relative w-full flex flex-col items-center">
+        <div className="relative lg:w-full  flex flex-col ml-5 lg:ml-0 mt-5 lg:m-0 lg:items-center ">
             <div className="relative max-w-[423px] h-80">
                 {testimonials.map((testimonial, index) => {
                     const isActive = index === current;
@@ -40,12 +39,12 @@ const TestimonialCarousel = () => {
                     const isNext = index === (current + 1) % testimonials.length;
 
                     return (
-                        <div
-                            key={index}
-                            className={`absolute top-0 rounded-xl border border-purple-300 p-4 bg-white shadow-md transition-all duration-500 ease-in-out
+                 <div
+                 key={index}
+                 className={`absolute lg:max-w-[1290px] top-0 rounded-xl border border-purple-300 p-4 bg-white shadow-md transition-all duration-500 ease-in-out
                 ${isActive ? "z-30 left-0 scale-100 opacity-100" : ""}
-                ${isPrev ? "z-20 left-8 mt-2 scale-92 opacity-100" : ""}
-                ${isNext ? "z-10 left-14 top-2 scale-88 opacity-100" : ""}
+                ${isPrev ? "z-20 lg:left-8 left-8  mt-2 scale-92 opacity-100" : ""}
+                ${isNext ? "z-10 lg:left-14 left-14 top-2 scale-88 opacity-100" : ""}
                 ${!isActive && !isPrev && !isNext ? "hidden" : ""}
               `}
                             style={{ width: "280px" }}
@@ -85,7 +84,7 @@ const TestimonialCarousel = () => {
                     );
                 })}
             </div>
-            <div className="flex gap-4 ml-15">
+            <div className="flex gap-4 lg:ml-15">
                 <GrFormPreviousLink onClick={prev} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] cursor-pointer	" />
                 <GrFormNextLink onClick={next} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] pointer cursor-pointer	" />
             </div>
