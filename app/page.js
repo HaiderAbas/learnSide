@@ -7,13 +7,13 @@ import Hours from "./components/Hours";
 
 export default function Home() {
   return (
-    <h1 className="">
+    <>
       <Hero/>
       <Hours/>
       <AboutFounder/>
       <Cohorts/>
       <Bootcamp/>
       <Bonuses />
-    </h1>
+    </>
   )
 }

@@ -5,7 +5,7 @@ import logo from "../../public/images/logo.png";
 import { IoMenu, IoClose } from "react-icons/io5";
 import Link from "next/link";
 
-const Navbar = () => {
+const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -62,4 +62,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;

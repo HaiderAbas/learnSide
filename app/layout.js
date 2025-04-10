@@ -1,5 +1,5 @@
 "use client"
-import Navbar from "./components/navbar";
+import Header from "./components/Header";
 import "./globals.css";
 export default function RootLayout({ children }) {
   return (
@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
           data-new-gr-c-s-check-loaded="14.1229.0"
           data-gr-ext-installed=""
           >
-        <Navbar />
+        <Header/>
         {children}
       </body>
     </html>

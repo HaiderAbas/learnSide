@@ -85,8 +85,8 @@ const TestimonialCarousel = () => {
                 })}
             </div>
             <div className="flex gap-4 lg:ml-15">
-                <GrFormPreviousLink onClick={prev} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] cursor-pointer	" />
-                <GrFormNextLink onClick={next} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] pointer cursor-pointer	" />
+                <GrFormPreviousLink onClick={prev} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] text-2xl cursor-pointer	" />
+                <GrFormNextLink onClick={next} className="bg-[#4183F5] rounded-2xl hover:bg-[#92b1e9] text-2xl pointer cursor-pointer	" />
             </div>
         </div>
     );

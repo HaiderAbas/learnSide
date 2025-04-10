@@ -4,8 +4,8 @@ import TestimonialCarousel from "./TestimonialCard";
 
 const Hero = () => {
     return (
-        <div className=" bg-[#0F243D] bg-opacity-30 shadow-md font-Inter flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2  p-6 w-full max-w-[1290px] mx-auto">
+        <div className=" bg-[#0F243D] bg-opacity-30 shadow-md font-Inter flex justify-center ">
+            <div className="grid grid-cols-1 md:grid-cols-2 py-12 w-full max-w-[1290px] mx-auto">
                 <div className="max-w-lg text-center md:text-left space-y-4">
                     <h2 className="font-inter font-bold text-white text-[20px] sm:text-[30px] md:text-4xl leading-[38px] sm:leading-[30px] md:leading-[50px] tracking-[-0.02em]">
                         <span className="text-blue-500 font-inter font-bold">Hey</span>Learn
@@ -17,7 +17,7 @@ const Hero = () => {
                         Become a Full-Stack Developer in 4 Months and get a <br /> developer job. If not, it is 100% FREE.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-row text-center sm:justify-center lg:justify-start gap-4">
                         <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition !text-sm">
                             Apply Now
                         </button>
@@ -26,7 +26,7 @@ const Hero = () => {
                         </button>
                     </div>
 
-                    <p className="text-[13px] sm:text-sm leading-6 text-[#F0F3FF]">
+                    <p className="text-[13px] sm:text-sm leading-6 text-[#F0F3FF] sm:text-center lg:text-start sm:font-[8px]">
                         ONLY FOR THOSE WHO GRADUATED LESS THAN 6 YEARS AGO
                     </p>
 
