@@ -5,7 +5,7 @@ const MoneyBack = () => {
     return (
         <div className='bg-white py-14'>
             <div className="relative bg-[#0E2644] p-6 rounded-md shadow-lg max-w-6xl mt-10 mx-auto">
-                <h3 className="text-white text-2xl font-medium mb-4">100% Money-back <br /> Guarantee</h3>
+                <h3 className="text-white text-2xl font-bold mb-4">100% Money-back <br /> Guarantee</h3>
                 <p className='font-inter text-[#EEEEEE] font-normal text-[12px] leading-6 tracking-[0%]'>
                     We're that confident in our program that we offer this insane money <br />
                     -back guarantee.</p>

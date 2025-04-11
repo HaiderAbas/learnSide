@@ -2,6 +2,7 @@ import Bonuses from "./components/Bonuses";
 import Bootcamp from "./components/Bootcamp";
 import Cohorts from "./components/Cohorts";
 import AboutFounder from "./components/Founder";
+import HandsOnCarousel from "./components/HandsOnCarousel";
 import Hero from "./components/HeroSction";
 import Hours from "./components/Hours";
 import MoneyBack from "./components/MoneyBack";
@@ -18,6 +19,7 @@ export default function Home() {
       <Bonuses />
       <TeachingMethod/>
       <MoneyBack/>
+      <HandsOnCarousel/>
     </>
   )
 }
