@@ -3,6 +3,7 @@ import Bootcamp from "./components/Bootcamp";
 import CodingJourney from "./components/CodingJourney";
 import Cohorts from "./components/Cohorts";
 import ComparisonTable from "./components/CompareTable";
+import ContactUs from "./components/ContactUs";
 import Course from "./components/Course";
 import CurriculumTable from "./components/CurriculumTable";
 import AboutFounder from "./components/Founder";
@@ -32,6 +33,7 @@ export default function Home() {
       <CurriculumTable/>
       <PriceCosts/>
       <OurStudents/>
+      <ContactUs/>
 
     </>
   )

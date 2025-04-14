@@ -70,7 +70,7 @@ const OurStudents = () => {
                     <h2 className="text-3xl md:text-4xl text-white font-bold leading-tight font-inter mb-2">
                         What Our Students <br /> Are Saying
                     </h2>
-                    <p className="text-sm md:text-base text-[#FAFAFA] mt-4 font-normal leading-relaxed font-inter">
+                    <p className="text-sm md:text-base text-[#FAFAFA] mt-4 font-normal leading-relaxed font-Inter">
                         Real experiences, real results. Hear from students who have transformed <br /> their careers with our bootcamp.
                     </p>
                 </div>
