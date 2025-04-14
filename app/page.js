@@ -1,6 +1,9 @@
 import Bonuses from "./components/Bonuses";
 import Bootcamp from "./components/Bootcamp";
+import CodingJourney from "./components/CodingJourney";
 import Cohorts from "./components/Cohorts";
+import ComparisonTable from "./components/CompareTable";
+import Course from "./components/Course";
 import AboutFounder from "./components/Founder";
 import HandsOnCarousel from "./components/HandsOnCarousel";
 import Hero from "./components/HeroSction";
@@ -20,6 +23,9 @@ export default function Home() {
       <TeachingMethod/>
       <MoneyBack/>
       <HandsOnCarousel/>
+      <Course/>
+      <CodingJourney/>
+      <ComparisonTable/>
     </>
   )
 }

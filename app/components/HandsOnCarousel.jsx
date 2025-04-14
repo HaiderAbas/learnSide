@@ -29,9 +29,9 @@ const Images = [
 const HandsOnCarousel = () => {
     return (
         <div className='bg-[#0C6FE0]'>
-            <div className='py-12   w-full lg:max-w-[1150px] mx-auto'>
-                <h3 className="text-white text-2xl font-bold mb-4">100% Money-back <br /> Guarantee</h3>
-                <p className='font-inter text-[#FFFFFF]  font-normal text-[12px] leading-6 tracking-[0%]'>
+            <div className='py-12 w-full lg:max-w-[1150px] mx-auto'>
+                <h3 className="text-white text-4xl font-bold mb-4">100% Money-back <br /> Guarantee</h3>
+                <p className='font-inter text-[#FFFFFF]  font-normal text-[14px] leading-6 tracking-[0%]'>
                     We're that confident in our program that we offer this insane money <br />
                     -back guarantee.</p>
 
