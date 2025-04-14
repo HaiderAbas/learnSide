@@ -10,6 +10,7 @@ import HandsOnCarousel from "./components/HandsOnCarousel";
 import Hero from "./components/HeroSction";
 import Hours from "./components/Hours";
 import MoneyBack from "./components/MoneyBack";
+import OurStudents from "./components/OurStudents";
 import PriceCosts from "./components/PriceCosts";
 import TeachingMethod from "./components/TeachingMethod";
 
@@ -30,6 +31,8 @@ export default function Home() {
       <ComparisonTable/>
       <CurriculumTable/>
       <PriceCosts/>
+      <OurStudents/>
+
     </>
   )
 }
