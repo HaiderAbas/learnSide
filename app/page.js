@@ -6,6 +6,7 @@ import ComparisonTable from "./components/CompareTable";
 import ContactUs from "./components/ContactUs";
 import Course from "./components/Course";
 import CurriculumTable from "./components/CurriculumTable";
+import FAQS from "./components/FAQS";
 import AboutFounder from "./components/Founder";
 import HandsOnCarousel from "./components/HandsOnCarousel";
 import Hero from "./components/HeroSction";
@@ -34,6 +35,8 @@ export default function Home() {
       <PriceCosts/>
       <OurStudents/>
       <ContactUs/>
+      <FAQS/>
+
 
     </>
   )
