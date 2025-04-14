@@ -9,8 +9,8 @@ const ComparisonTable = () => {
     const headings = ["Feature", "Degree / Master’s", "Our Bootcamp", "Other Bootcamp"];
 
     const BlueTick = (
-        <div className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#F1F1F1] mx-auto">
-            <FaCheck className="text-[#4183F5] text-sm" />
+        <div className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#F1F1F1] mx-auto">
+            <FaCheck className="text-[#4183F5] text-[11px]" />
         </div>
     );
 
@@ -31,7 +31,7 @@ const ComparisonTable = () => {
             <h2 className='text-[#000000] text-4xl font-bold mb-4 leading-12'>
                 Why It makes Sense <br /> To join Us?
             </h2>
-            <p className='font-inter text-[#0F243DCC] font-normal text-[14px] leading-6 tracking-[0%] py-6'>
+            <p className='font-inter text-[#0F243DCC] font-normal text-[14px] leading-6 tracking-[0%] pb-6'>
                 Compare the difference by yourself
             </p>
 
@@ -62,7 +62,7 @@ const ComparisonTable = () => {
                                 {row.map((cell, colIdx) => (
                                     <td
                                         key={colIdx}
-                                        className={`px-4 py-4 border border-gray-200 text-sm sm:text-base 
+                                        className={`px-4 py-4 border border-gray-200 text-[7px] sm:text-base 
                                             ${colIdx === 0 ? "text-left" : "text-center"}`}
                                     >
                                         {cell}

@@ -4,6 +4,7 @@ import CodingJourney from "./components/CodingJourney";
 import Cohorts from "./components/Cohorts";
 import ComparisonTable from "./components/CompareTable";
 import Course from "./components/Course";
+import CurriculumTable from "./components/CurriculumTable";
 import AboutFounder from "./components/Founder";
 import HandsOnCarousel from "./components/HandsOnCarousel";
 import Hero from "./components/HeroSction";
@@ -26,6 +27,7 @@ export default function Home() {
       <Course/>
       <CodingJourney/>
       <ComparisonTable/>
+      <CurriculumTable/>
     </>
   )
 }
